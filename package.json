@@ -1,0 +1,32 @@
+{
+  "name": "smc-web-kiosk",
+  "version": "1.0.1",
+  "description": "Basic web-kiosk application for linux ignoring cert error",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:dev": "electron . -- url=https://google.com",
+    "build": "npm run clean && electron-builder --linux snap",
+    "clean": "rm -rf dist",
+    "dev:install": "snap install dist/*.snap --dangerous"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGrzegorzewski/smc-web-kiosk.git"
+  },
+  "keywords": [
+    "snap",
+    "kiosk",
+    "web"
+  ],
+  "author": "Jakub Grzegorzewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JGrzegorzewski/smc-web-kiosk/issues"
+  },
+  "homepage": "https://github.com/JGrzegorzewski/smc-web-kiosk#readme",
+  "devDependencies": {
+    "electron": "^20.1.4",
+    "electron-builder": "^23.3.3"
+  }
+}
